@@ -1,5 +1,5 @@
-const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-const highFrequency = ["Read", "group", "turn", "might", "earth", "each", "without", "bear", "into", "myself", "more", "outside", "inside", "today", "world", "clean", "close", "four", "hear", "point"];
+const letters = ["A", "C", "D", "G", "I", "J", "O", "P", "Qu", "R", "S", "T", "U"];
+const highFrequency = ["read", "group", "turn", "might", "earth", "each", "without", "bear", "into", "myself", "more", "outside", "inside", "today", "world", "clean", "close", "four", "hear", "point"];
 const josephsList = ["apple", "banana", "cherry", "date", "elderberry"];
 const lillysList = ["cat", "dog", "elephant", "frog", "giraffe"];
 
