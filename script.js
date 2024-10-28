@@ -1,6 +1,16 @@
 const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-const highFrequency = ["read", "group", "turn", "might", "earth", "each", "without", "bear", "into", "myself", "more", "outside", "inside", "today", "world", "clean", "close", "four", "hear", "point"];
-let currentList = letters;
+const highFrequency = ["Read", "group", "turn", "might", "earth", "each", "without", "bear", "into", "myself", "more", "outside", "inside", "today", "world", "clean", "close", "four", "hear", "point"];
+const josephsList = ["apple", "banana", "cherry", "date", "elderberry"];
+const lillysList = ["cat", "dog", "elephant", "frog", "giraffe"];
+
+const lists = [
+    { name: "Letters", data: letters },
+    { name: "High Frequency", data: highFrequency },
+    { name: "Joseph's List", data: josephsList },
+    { name: "Lilly's List", data: lillysList }
+];
+let currentListIndex = 0;
+let currentList = lists[currentListIndex].data;
 let currentIndex = Math.floor(Math.random() * currentList.length);
 let isUppercase = true;
 let isRandom = true;
@@ -35,9 +45,10 @@ function toggleCase() {
 }
 
 function switchList() {
-    currentList = currentList === letters ? highFrequency : letters;
+    currentListIndex = (currentListIndex + 1) % lists.length;
+    currentList = lists[currentListIndex].data;
     currentIndex = Math.floor(Math.random() * currentList.length);
-    document.getElementById('switchList').classList.toggle('toggled', currentList === highFrequency);
+    document.getElementById('switchList').textContent = `${lists[currentListIndex].name}`;
     updateLetter();
 }
 
@@ -46,4 +57,7 @@ function toggleRandom() {
     document.getElementById('toggleRandom').classList.toggle('toggled', isRandom);
 }
 
-document.addEventListener('DOMContentLoaded', updateLetter);
+document.addEventListener('DOMContentLoaded', () => {
+    updateLetter();
+    document.getElementById('switchList').textContent = `List: ${lists[currentListIndex].name}`;
+});
