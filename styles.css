@@ -59,7 +59,7 @@ button-container {
 /* Responsive design for tablets */
 @media (max-width: 768px) {
     .letter {
-        font-size: 30vmin; /* Adjust font size for smaller screens */
+        font-size: 20vmin; /* Adjust font size for smaller screens */
     }
 
     .arrow {
