@@ -42,7 +42,7 @@ button-container {
 }
 
 .letter {
-    font-size: 40vmin; /* Adjusted font size */
+    font-size: 20vmin; /* Adjusted font size */
     color: black;
     text-align: center;
     flex-grow: 1;
